@@ -1,29 +1,18 @@
-window.sr = ScrollReveal({ reset: true });
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".scroll-link");
 
-ScrollReveal().reveal('#sobre-mim', { delay: 300 });
-ScrollReveal().reveal('#skills', { delay: 300 });
-ScrollReveal().reveal('#hobbies', { delay: 300 });
-ScrollReveal().reveal('#formacao', { delay: 300 });
-ScrollReveal().reveal('#projeto', { delay: 300 });
-ScrollReveal().reveal('#contato', { delay: 300 });
+  links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
 
-const scrollLinks = document.querySelectorAll('.scroll-link');
-scrollLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const targetId = link.getAttribute('href');
-    const targetElement = document.querySelector(targetId);
+      const target = document.querySelector(link.getAttribute("href"));
 
-    if (targetElement) {
-      const offsetTop = targetElement.offsetTop;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
+      target.scrollIntoView({
+        behavior: "smooth"
       });
-    }
+    });
   });
 });
-
 
 window.onscroll = function () { mostrarOcultarBotao() };
 
