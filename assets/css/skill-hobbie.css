@@ -1,0 +1,64 @@
+.skills-class {
+    max-width: 1220px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.caixa-skills {
+    margin-bottom: 50px;
+}
+
+.skills-class h2,
+.hobbie h2 {
+    text-align: center;
+    color: #464646;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.skills-class ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-class li {
+    background: #fff;
+    height: 174px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+}
+
+.skills-class li p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+@media (max-width:830px) {
+    .skills-class ul {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills-class li {
+        height:118px;
+        width: auto;
+    }
+}
+
+@media (max-width:500px) {
+    .skills-class ul {
+        grid-template-columns: repeat(2, 3fr);
+    }
+}

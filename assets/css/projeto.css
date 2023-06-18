@@ -1,0 +1,119 @@
+.projeto-prof {
+    padding: 30px 20px;
+}
+
+.container-projeto {
+    margin: auto;
+    max-width: 1220px;
+}
+
+.container-projeto h2 {
+    text-align: center;
+    color: #464646;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.container-projeto ul {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container-projeto ul li {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.descricao-projeto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+    gap: 12px;
+}
+
+.direita {
+    align-items: end;
+}
+
+.imagem-projeto {
+    max-width: 800px;
+}
+
+.imagem-projeto img {
+    width: 100%;
+    box-shadow: 3px 3px 10px #000;
+}
+
+.descricao-projeto h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #464646;
+}
+
+.descricao-projeto p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links .transparente {
+    background-color: transparent;
+    border: 1px solid rgb(42, 122, 228);
+    color: rgb(42, 122, 228);
+    font-weight: 400;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s ease 0s;
+}
+
+.links .azul {
+    background-color: rgb(42, 122, 228);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s ease 0s;
+}
+
+@media (max-width:800px) {
+    .container-projeto ul li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-projeto ul li:nth-child(2),
+    .container-projeto ul li:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .descricao-projeto h3,
+    .descricao-projeto p {
+        text-align:center;
+    }
+}
+
+@media (max-width:500px) {
+    .links .transparente,
+    .links .azul {
+        font-weight:700;
+        font-size:13px;
+    }
+}
