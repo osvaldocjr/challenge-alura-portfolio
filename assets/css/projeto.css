@@ -108,6 +108,13 @@
     .descricao-projeto p {
         text-align:center;
     }
+    .direita {
+        align-items:normal;
+    }
+
+    .links {
+        justify-content:center;
+    }
 }
 
 @media (max-width:500px) {
@@ -115,5 +122,8 @@
     .links .azul {
         font-weight:700;
         font-size:13px;
+    }
+    .links {
+        justify-content: center;
     }
 }
