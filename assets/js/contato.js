@@ -1,6 +1,14 @@
-const submitButton = document.querySelector('button');
+const submitButton = document.querySelector('.enviar-contato');
 
 let isValidationExecuted = false;
+
+function limparCampos(form) {
+    const inputElements = form.querySelectorAll('input, textarea');
+
+    inputElements.forEach((input) => {
+        input.value = '';
+    });
+}
 
 function verificarCampos(event) {
     event.preventDefault();
@@ -11,7 +19,8 @@ function verificarCampos(event) {
 
     isValidationExecuted = true;
 
-    const inputElements = document.querySelectorAll('input[required], textarea[required]');
+    const form = event.target.form;
+    const inputElements = form.querySelectorAll('input[required], textarea[required]');
 
     let hasErrors = false;
     for (let i = 0; i < inputElements.length; i++) {
@@ -68,8 +77,19 @@ function verificarCampos(event) {
         }
     }
 
-    if (hasErrors) {
-        return;
+    if (!hasErrors) {
+        // Simulando o envio da mensagem (substitua pelo seu código de envio)
+        setTimeout(function () {
+            alert('Mensagem enviada com sucesso!');
+            limparCampos(form);
+            submitButton.textContent = 'Enviar';
+
+            // Redefinindo a validação para permitir envios posteriores
+            isValidationExecuted = false;
+        }, 1000);
+
+        // Definindo o texto do botão como "Enviando..."
+        submitButton.textContent = 'Enviando...';
     }
 }
 
