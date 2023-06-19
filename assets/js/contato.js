@@ -82,7 +82,7 @@ function verificarCampos(event) {
         setTimeout(function () {
             alert('Mensagem enviada com sucesso!');
             limparCampos(form);
-            submitButton.textContent = 'Enviar';
+            submitButton.textContent = 'Enviar mensagem';
 
             // Redefinindo a validação para permitir envios posteriores
             isValidationExecuted = false;
