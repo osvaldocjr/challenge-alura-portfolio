@@ -78,17 +78,14 @@ function verificarCampos(event) {
     }
 
     if (!hasErrors) {
-        // Simulando o envio da mensagem (substitua pelo seu código de envio)
         setTimeout(function () {
             alert('Mensagem enviada com sucesso!');
             limparCampos(form);
             submitButton.textContent = 'Enviar mensagem';
 
-            // Redefinindo a validação para permitir envios posteriores
             isValidationExecuted = false;
         }, 1000);
 
-        // Definindo o texto do botão como "Enviando..."
         submitButton.textContent = 'Enviando...';
     }
 }
